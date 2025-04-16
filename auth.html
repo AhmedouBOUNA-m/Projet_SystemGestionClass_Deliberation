@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/CSS/Style.css" rel="stylesheet">
+    <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Authentification</title>
+</head>
+<body>
+    <form id="formInscription" bindsubmit>
+        <div class="card  col-6 position-absolute top-50 start-50 translate-middle shadow">
+            <div class="card-header bg-body-secondary text-capitalize">
+                <h5 class="card-title text-center">Inscription</h5>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group mb-2">
+                    <label class="form-label" for>Nom d'utilisateur</label>
+                    <input class="form-control" id="username" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for>Email</label>
+                    <input class="form-control" id="mail" type="email">
+                </div>
+                <div class="form-group mb-2">
+                    <label class="form-label" for>Mot de passe</label>
+                    <input class="form-control" id="mdp" type="password">
+                </div>
+            </div>
+            <div class="card-footer bg-body-secondary">
+                <div>
+                    <button class="btn btn-success" id="Inscriptionbutton" type="submit">S'inscrir</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="assets/JS/app.js"></script>
+</html>
