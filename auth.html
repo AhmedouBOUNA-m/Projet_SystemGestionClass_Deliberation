@@ -5,58 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/CSS/Style.css" rel="stylesheet">
     <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <title>Authentification</title>
+    <title>connection</title>
 </head>
 <body>
-    <form id="formInscrip" bindsubmit>
-        <div class="card  col-6 position-absolute top-50 start-50 translate-middle shadow">
-            <div class="card-header bg-body-secondary text-capitalize">
-                <h5 class="card-title text-center">Inscription</h5>
-            </div>
-
+    <form onsubmit="login(event)">
+        <div class="card  col-11 col-sm-5 position-absolute top-50 start-50 translate-middle shadow">
             <div class="card-body">
+                <p class="card-title text-center">Se connecter</p>
                 <div class="form-group mb-2">
-                    <label class="form-label" for>Nom d'utilisateur</label>
-                    <input class="form-control" id="userName" type="text">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for>Email</label>
-                    <input class="form-control" id="mail" type="email">
+                    <input class="form-control" id="email" type="email" placeholder="Email" required>
                 </div>
                 <div class="form-group mb-2">
-                    <label class="form-label" for>Mot de passe</label>
-                    <input class="form-control" id="mdp" type="password">
+                    <input class="form-control " id="password" type="password" placeholder="Mot de passe" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">se connecter</button>
                 </div>
             </div>
-            <div class="card-footer bg-body-secondary">
-                <div>
-                    <button class="btn btn-success" id="inscriptionButton" type="submit">S'inscrir</button>
-                </div>
-            </div>
-        </div>
-    </form>
-
-    <!-- formulaire connexion  -->
-    <form id="formconnexion" bindsubmit>
-        <div class="card  col-6  shadow">
-            <div class="card-header bg-body-secondary text-capitalize">
-                <h5 class="card-title text-center">connexion</h5>
-            </div>
-
-            <div class="card-body">
-                <div class="form-group">
-                    <label class="form-label" for>Email</label>
-                    <input class="form-control" id="Email" type="email">
-                </div>
-                <div class="form-group mb-2">
-                    <label class="form-label" for>Mot de passe</label>
-                    <input class="form-control" id="psw" type="password">
-                </div>
-            </div>
-            <div class="card-footer bg-body-secondary">
-                <div>
-                    <button class="btn btn-success" id="iconnexionButton" type="submit">S'inscrir</button>
-                </div>
+            <hr class="sidebar-divider">
+            <div class="d-grid gap-2 col-6  mx-auto mb-2">    
+                <button class="btn btn-success" type="button" onclick="goToPage()">Créer un nouveau compte</button>
             </div>
         </div>
     </form>

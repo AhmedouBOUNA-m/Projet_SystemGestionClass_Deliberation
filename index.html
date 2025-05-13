@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/Style.css">
-    <link rel="stylesheet" href="assets/CSS/Bootstrap/css/bootstrap.min.css">
+    <link href="assets/CSS/Style.css" rel="stylesheet">
+    <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title>Index</title>
 </head>
 <body>
-    
-</body>
+
+  <div class="container mt-5 align-content-center">
+    <h1 class="text-center">Bienvenu</h1>
+    <button class="btn btn-success" onclick="logout()">deconnecter</button>
+  </div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const token = localStorage.getItem('authToken');
+      if (!token) {
+        window.location.href = 'auth.html';
+      }
+    });
+  function logout() {
+  // Supprime le token stocké
+  localStorage.removeItem('authToken');
+  window.location.reload();
+}
+
+    </script>
 </html>

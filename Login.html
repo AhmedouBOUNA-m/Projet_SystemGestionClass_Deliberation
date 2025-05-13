@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/CSS/Style.css" rel="stylesheet">
+    <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Authentification</title>
+</head>
+<body>
+    <form onsubmit="register(event)">
+        <div class="card col-11 col-sm-6 position-absolute top-50 start-50 translate-middle shadow">
+        
+            <h5 class="card-title text-center mt-3">Créer un compte</h5>
+
+            <div class="card-body">
+                <div class="form-group mb-2">
+                    <input class="form-control" id="name" type="text" placeholder="Nom" required>
+                    
+                </div>
+                <div class="form-group mb-2">
+                    <input class="form-control" id="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group mb-2">
+                    <input class="form-control" id="password" type="password" placeholder="Mot de passe" required>
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto">
+                    <button class="btn btn-success"  type="submit">S'inscrir</button>
+            </div>
+            <div class="text-xl-center m-3">
+                <a class="nav-link text-primary" href="auth.html">Vous avez déjà un compte ?</a>
+            </div>
+        </div>
+    </form>
+
+
+
+</body>
+<script src="assets/JS/app.js"></script>
+</html>
