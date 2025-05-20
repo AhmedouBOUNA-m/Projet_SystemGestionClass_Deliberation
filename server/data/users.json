@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Ahmedou",
+    "email": "ahmedouboune1@gmail.com",
+    "password": "$2b$10$SrqcyaxSJt9KMw6ceFlE8ukdifcYCRJ9yac8VXL.cviCKnSWu.W5O",
+    "id": 1
+  },
+  {
+    "name": "arthur",
+    "email": "cgrisqrthur@gmail.com",
+    "password": "$2b$10$BON1wxCNunXg0JUmeJIqTu2iFiqVr8BqM8ZkGBIJwwGss/fB6YhnS",
+    "id": 2
+  },
+  {
+    "name": "siraf",
+    "email": "nohop39214@hdrlog.com",
+    "password": "$2b$10$4iidbMFLIMhm4wu7pBF0RudqsNoX48olwAY7AqoK8kvqY8wEE4IBK",
+    "id": 3
+  }
+]
