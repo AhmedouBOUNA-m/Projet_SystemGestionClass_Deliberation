@@ -87,13 +87,21 @@ const server = http.createServer((req, res) => {
     });
   }
   else if (req.url === '/users' && req.method === 'GET') {
-    const users = getUsers();
+    try{
 
-    // Supprimer les mots de passe avant d'envoyer la liste des utilisateurs
-    const sanitizedUsers = users.map(({ password, ...userWithoutPassword }) => userWithoutPassword);
+      const users = getUsers();
   
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(sanitizedUsers));
+      // Supprimer les mots de passe avant d'envoyer la liste des utilisateurs
+      const sanitizedUsers = users.map(({ password, ...userWithoutPassword }) => userWithoutPassword);
+    
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(sanitizedUsers));
+    }catch (error) {
+      console.error('Erreur lors de la récupération des utilisateurs:', error);
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erreur interne du serveur' }));
+
+    }
   }
 
   else {

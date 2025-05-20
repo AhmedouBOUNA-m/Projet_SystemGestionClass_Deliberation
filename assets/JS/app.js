@@ -27,7 +27,7 @@ function login(e) {
     .then(data => {
       if (data.token) {
         localStorage.setItem('authToken', data.token);
-        alert("Connexion réussie !");
+        // alert("Connexion réussie !");
         window.location.href = 'index.html'; // Redirection après connexion
       } else {
         alert(data.error || "Erreur de connexion");
@@ -60,4 +60,21 @@ function goToPage() {
                 $('#usersTable').DataTable(); // Activation de DataTables
             })
             .catch(error => console.error('Erreur de chargement:', error));
-    });
+});
+
+// Fonction pour se déconnecter
+  function logout() {
+  // Supprime le token stocké
+  localStorage.removeItem('authToken');
+  window.location.reload();
+}
+
+// Fonction pour vérifier le token JWT
+    // recuperer le nom d'utilisateur
+    const username = localStorage.getItem('username');
+    document.addEventListener('DOMContentLoaded', function() {
+      const token = localStorage.getItem('authToken');
+      if (!token) {
+        window.location.href = 'auth.html';
+      }
+});
