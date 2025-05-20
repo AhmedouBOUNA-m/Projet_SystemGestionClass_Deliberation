@@ -42,3 +42,22 @@ function goToPage() {
   window.location.href = "Login.html"; 
 }
 
+
+// Fonction pour afficher la liste des utilisateurs
+    $(document).ready(function () {
+        fetch('http://localhost:3000/users')
+            .then(response => response.json())
+            .then(users => {
+                let rows = '';
+                users.forEach(user => {
+                    rows += `<tr>
+                                <td>${user.id}</td>
+                                <td>${user.name || 'N/A'}</td>
+                                <td>${user.email}</td>
+                             </tr>`;
+                });
+                $('#usersTable tbody').html(rows);
+                $('#usersTable').DataTable(); // Activation de DataTables
+            })
+            .catch(error => console.error('Erreur de chargement:', error));
+    });
