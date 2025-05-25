@@ -2,6 +2,12 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+// bcrypt est utilisé pour le hachage des mots de passe
+const bcrypt = require('bcrypt');
+// Fonction pour générer un identifiant numérique unique
+function generateNumericId(users) {
+    return users.length > 0 ? users[users.length - 1].id + 1 : 1;
+}
 
 const usersFile = path.join(__dirname, 'data', 'users.json');
 
@@ -32,18 +38,26 @@ const server = http.createServer((req, res) => {
     return res.end();
   }
   if (req.url === '/register' && req.method === 'POST') {
-    parseBody(req, (userData) => {
+    parseBody(req, async (userData) => {
       const users = getUsers();
       const exists = users.find(u => u.email === userData.email);
       if (exists) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
         return res.end(JSON.stringify({ error: 'Email déjà utilisé' }));
       }
+
+      // Générer un identifiant unique
+      userData.id = generateNumericId(users);
+
+      // Hasher le mot de passe
+      const saltRounds = 10;
+      userData.password = await bcrypt.hash(userData.password, saltRounds);
+      // Enregistrer l'utilisateur
       users.push(userData);
       saveUsers(users);
       res.writeHead(201, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ message: 'Inscription réussie' }));
-    });
+      res.end(JSON.stringify({ message: 'Inscription réussie', userId: userData.id }));
+    });
   }
 
   else if (req.url === '/login' && req.method === 'POST') {
