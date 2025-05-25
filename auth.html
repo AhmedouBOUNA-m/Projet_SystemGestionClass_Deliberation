@@ -8,58 +8,14 @@
     <title>Authentification</title>
 </head>
 <body>
-    <form id="formInscrip" bindsubmit>
-        <div class="card  col-6 position-absolute top-50 start-50 translate-middle shadow">
-            <div class="card-header bg-body-secondary text-capitalize">
-                <h5 class="card-title text-center">Inscription</h5>
-            </div>
+   <h3>Inscription</h3>
+<form onsubmit="register(event)">
+  <input type="text" id="name" placeholder="Nom" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Mot de passe" required>
+  <button>S'inscrire</button>
+</form>
 
-            <div class="card-body">
-                <div class="form-group mb-2">
-                    <label class="form-label" for>Nom d'utilisateur</label>
-                    <input class="form-control" id="userName" type="text">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for>Email</label>
-                    <input class="form-control" id="mail" type="email">
-                </div>
-                <div class="form-group mb-2">
-                    <label class="form-label" for>Mot de passe</label>
-                    <input class="form-control" id="mdp" type="password">
-                </div>
-            </div>
-            <div class="card-footer bg-body-secondary">
-                <div>
-                    <button class="btn btn-success" id="inscriptionButton" type="submit">S'inscrir</button>
-                </div>
-            </div>
-        </div>
-    </form>
-
-    <!-- formulaire connexion  -->
-    <form id="formconnexion" bindsubmit>
-        <div class="card  col-6  shadow">
-            <div class="card-header bg-body-secondary text-capitalize">
-                <h5 class="card-title text-center">connexion</h5>
-            </div>
-
-            <div class="card-body">
-                <div class="form-group">
-                    <label class="form-label" for>Email</label>
-                    <input class="form-control" id="Email" type="email">
-                </div>
-                <div class="form-group mb-2">
-                    <label class="form-label" for>Mot de passe</label>
-                    <input class="form-control" id="psw" type="password">
-                </div>
-            </div>
-            <div class="card-footer bg-body-secondary">
-                <div>
-                    <button class="btn btn-success" id="iconnexionButton" type="submit">S'inscrir</button>
-                </div>
-            </div>
-        </div>
-    </form>
 </body>
 <script src="assets/JS/app.js"></script>
 </html>
