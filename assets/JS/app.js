@@ -6,11 +6,19 @@ function register(e) {
     body: JSON.stringify({
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
-      password: document.getElementById('password').value
+      password: document.getElementById('password').value 
     })
   })
     .then(res => res.json())
-    .then(data => alert(data.message || data.error));
+    .then(data => {
+      if (data.token) {
+        localStorage.setItem('authToken', data.token);
+        // alert("Connexion réussie !");
+        window.location.href = 'index.html'; // Redirection après connexion
+      } else {
+        alert(data.error || "Erreur de connexion");
+      }
+    })
 }
 
 function login(e) {

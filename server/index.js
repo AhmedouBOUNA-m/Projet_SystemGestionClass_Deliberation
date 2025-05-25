@@ -58,7 +58,8 @@ const server = http.createServer((req, res) => {
       users.push(userData);
       saveUsers(users);
       res.writeHead(201, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ message: 'Inscription réussie', userId: userData.id }));
+      const token = jwt.sign({ email: userData.email }, SECRET_KEY, { expiresIn: '1h' });
+      res.end(JSON.stringify({ message: 'Inscription réussie', userId: userData.id, token }));
     });
   }
 

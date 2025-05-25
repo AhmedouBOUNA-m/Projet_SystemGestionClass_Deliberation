@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/CSS/Style.css" rel="stylesheet">
     <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap4.css" rel="stylesheet">
+    
+
     <title>Index</title>
 </head>
 <body>
@@ -12,7 +16,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">app</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -39,14 +43,13 @@
 
 
 
-  <div class="container mt-5 align-content-center">
-    <h1 class="text-center">Bienvenue</h1>
-  </div>
+  <!-- <div class="container mt-5 align-content-center">
+    <h2 class="text-center">Bienvenue</h2>
+  </div> -->
 
   <!-- //afficher les utilisateurs -->
-  <div class="container mt-4">
-    <h2 class="text-center">Liste des utilisateurs</h2>
-    <table class="table table-striped table-bordered" id="usersTable">
+<div class="container shadow mt-4 mb-4 p-3">
+    <table class="table table-striped table-bordered p-5 " id="usersTable">
         <thead class="table-dark">
             <tr>
                 <th>ID</th>
@@ -60,10 +63,16 @@
     </table>
 </div>
 
+<footer class="card-footer" >
+    <p class="container text-center">&copy; 2025 Projet Atelier. izi dakar L'2IAGE.</p>
+</footer>
+
 </body>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="https://cdn.datatables.net/2.3.1/js/dataTables.js"></script>
+   <script src="https://cdn.datatables.net/2.3.1/js/dataTables.bootstrap4.js"></script>
 <script src="assets/JS/app.js"></script>
 
 </html>

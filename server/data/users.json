@@ -16,5 +16,23 @@
     "email": "nohop39214@hdrlog.com",
     "password": "$2b$10$4iidbMFLIMhm4wu7pBF0RudqsNoX48olwAY7AqoK8kvqY8wEE4IBK",
     "id": 3
+  },
+  {
+    "name": "khalifa",
+    "email": "nohop39214@hdrlg.com",
+    "password": "$2b$10$jCiE8uO93gDTHz1dcoROZeCbcihyvHByqrP1Y1cFmjnNaiVXCXaX.",
+    "id": 4
+  },
+  {
+    "name": "Ahmedou",
+    "email": "ahmedouboun1@gmail.com",
+    "password": "$2b$10$fFivYDCHdavaQXRkG7yVP.KmbZrOu9e3GTOYNmiJg203PAEsuKBYi",
+    "id": 5
+  },
+  {
+    "name": "Moustapha Gningue🇸🇳",
+    "email": "vrcwes@rvf",
+    "password": "$2b$10$B7P/TwHZq.ZgTDgtZ5Cu6uI.TkPzAGBfQSMw6okQNaqMM26PTOc4e",
+    "id": 6
   }
 ]
