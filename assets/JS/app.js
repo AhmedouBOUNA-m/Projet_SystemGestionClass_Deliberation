@@ -20,18 +20,21 @@ function setLoading(button, isLoading) {
     const icon = button.classList.contains("login-btn")
       ? "fa-sign-in-alt"
       : "fa-user-plus";
-    button.innerHTML = `<i class="fas ${icon}"></i> ${button.textContent.trim()}`;
+    button.innerHTML = `<i class="fas ${icon}"></i> ${button.dataset.originalText}`;
   }
 }
 
 async function register(e) {
   e.preventDefault();
-<<<<<<< HEAD
   const form = e.target;
   const button = form.querySelector("button[type='submit']");
+  if (!button.dataset.originalText) {
+    button.dataset.originalText = button.textContent.trim();
+  }
 
   try {
     setLoading(button, true);
+
     const formData = {
       name: form.querySelector("#name").value.trim(),
       email: form.querySelector("#email").value.trim(),
@@ -40,6 +43,7 @@ async function register(e) {
 
     if (!formData.name || !formData.email || !formData.password) {
       showToast("Veuillez remplir tous les champs", "error");
+      setLoading(button, false);
       return;
     }
 
@@ -69,9 +73,13 @@ async function login(e) {
   e.preventDefault();
   const form = e.target;
   const button = form.querySelector("button[type='submit']");
+  if (!button.dataset.originalText) {
+    button.dataset.originalText = button.textContent.trim();
+  }
 
   try {
     setLoading(button, true);
+
     const formData = {
       email: form.querySelector("#email").value.trim(),
       password: form.querySelector("#password").value,
@@ -82,10 +90,6 @@ async function login(e) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
-
-    if (!response) {
-      throw new Error("Impossible de se connecter au serveur");
-    }
 
     const data = await response.json();
 
@@ -145,7 +149,9 @@ async function loadUsers() {
     if (!response.ok) throw new Error("Erreur lors du chargement");
 
     const users = await response.json();
-    const table = $("#usersTable").DataTable({
+
+    // Initialiser DataTables
+    $("#usersTable").DataTable({
       language: { url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/fr-FR.json" },
       responsive: true,
       data: users,
@@ -210,77 +216,28 @@ function setupTableActions() {
   $(document).on("click", ".edit-btn", function () {
     const userId = $(this).data("id");
     showToast(`Édition de l'utilisateur ${userId}`, "info");
-    // Ici prouquoi pas implémenter la logique d'édition dit moi gays
+    // Ici tu peux implémenter la logique d'édition
   });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  checkAuth();
+  if (!checkAuth()) return;
 
   const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
   document.querySelectorAll(".user-name").forEach((el) => {
     el.textContent = user.name || "Invité";
   });
 
-  //c'est là que on gere les formulaires
-  document
-    .querySelector("form[onsubmit='register(event)']")
-    ?.addEventListener("submit", register);
-  document
-    .querySelector("form[onsubmit='login(event)']")
-    ?.addEventListener("submit", login);
+  const registerForm = document.querySelector(
+    "form[onsubmit='register(event)']"
+  );
+  if (registerForm) registerForm.addEventListener("submit", register);
 
-  // Initialisation du tab si on est sur users.html
+  const loginForm = document.querySelector("form[onsubmit='login(event)']");
+  if (loginForm) loginForm.addEventListener("submit", login);
+
   if (location.pathname.includes("users.html")) {
     loadUsers();
     setupTableActions();
   }
 });
-=======
-  fetch('http://localhost:3000/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      email: document.getElementById('email').value,
-      password: document.getElementById('password').value
-    })
-  })
-    .then(res => res.json())
-    .then(data => {
-      if (data.token) {
-        localStorage.setItem('authToken', data.token);
-        alert("Connexion réussie !");
-        window.location.href = 'index.html'; // Redirection après connexion
-      } else {
-        alert(data.error || "Erreur de connexion");
-      }
-    })
-    .catch(error => console.error('Erreur:', error));
-}
-
-
-function goToPage() {
-  // rederiger de la formulaire connection vers d'inscription 
-  window.location.href = "Login.html"; 
-}
-
-
-// Fonction pour afficher la liste des utilisateurs
-    $(document).ready(function () {
-        fetch('http://localhost:3000/users')
-            .then(response => response.json())
-            .then(users => {
-                let rows = '';
-                users.forEach(user => {
-                    rows += `<tr>
-                                <td>${user.id}</td>
-                                <td>${user.name || 'N/A'}</td>
-                                <td>${user.email}</td>
-                             </tr>`;
-                });
-                $('#usersTable tbody').html(rows);
-                $('#usersTable').DataTable(); // Activation de DataTables
-            })
-            .catch(error => console.error('Erreur de chargement:', error));
-    });
->>>>>>> 072ed277c772b7419535cf5f40948b73241e4ea5
