@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
@@ -21,6 +22,17 @@ if (!fs.existsSync(usersFile)) {
   fs.writeFileSync(usersFile, "[]", "utf-8");
   log("Fichier users.json créé");
 }
+=======
+// server/index.js
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const jwt = require('jsonwebtoken');
+const SECRET_KEY = 'ma_clé_secrète';
+const bcrypt = require('bcrypt');
+
+const usersFile = path.join(__dirname, 'data', 'users.json');
+>>>>>>> 072ed277c772b7419535cf5f40948b73241e4ea5
 
 function getUsers() {
   try {
@@ -54,6 +66,11 @@ function parseBody(req) {
     });
   });
 }
+// Fonction pour générer un identifiant numérique unique
+function generateNumericId(users) {
+    return users.length > 0 ? users[users.length - 1].id + 1 : 1;
+}
+
 
 const server = http.createServer(async (req, res) => {
   // CORS
@@ -68,6 +85,7 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(200);
     return res.end();
   }
+<<<<<<< HEAD
 
   try {
     log(`${req.method} ${req.url}`);
@@ -75,6 +93,10 @@ const server = http.createServer(async (req, res) => {
     // Route:Inscription
     if (req.url === "/register" && req.method === "POST") {
       const userData = await parseBody(req);
+=======
+  if (req.url === '/register' && req.method === 'POST') {
+    parseBody(req, async (userData) => {
+>>>>>>> 072ed277c772b7419535cf5f40948b73241e4ea5
       const users = getUsers();
 
       if (!userData.name || !userData.email || !userData.password) {
@@ -85,6 +107,7 @@ const server = http.createServer(async (req, res) => {
         );
       }
 
+<<<<<<< HEAD
       if (users.some((u) => u.email === userData.email)) {
         log(`Tentative d'inscription - Email déjà utilisé: ${userData.email}`);
         res.writeHead(400, { "Content-Type": "application/json" });
@@ -117,6 +140,55 @@ const server = http.createServer(async (req, res) => {
       const loginData = await parseBody(req);
       const users = getUsers();
       const user = users.find((u) => u.email === loginData.email);
+=======
+      // Générer un identifiant unique
+      userData.id = generateNumericId(users);
+
+      // Hasher le mot de passe
+      const saltRounds = 10;
+      userData.password = await bcrypt.hash(userData.password, saltRounds);
+      // Enregistrer l'utilisateur
+      users.push(userData);
+      saveUsers(users);
+      res.writeHead(201, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Inscription réussie', userId: userData.id }));
+    });
+  }
+
+  else if (req.url === '/login' && req.method === 'POST') {
+    parseBody(req, async (loginData) => {
+      const users = getUsers();
+      // Vérifier si l'utilisateur existe par email
+      const found = users.find(u => u.email === loginData.email);
+      if (found) {
+        // Vérifier le mot de passe 
+        const match = await bcrypt.compare(loginData.password, found.password);
+        if (match) {
+          const token = jwt.sign({ email: found.email }, SECRET_KEY, { expiresIn: '1h' });
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ message: 'Connexion réussie', token }));
+        } else {
+          res.writeHead(401, { 'Content-Type': 'application/json' });
+          // message d'erreur pour mot de passe incorrect
+          res.end(JSON.stringify({ error: 'mot de passe incorrect' }));
+        }
+      } else {
+        // message d'erreur pour email incorrect
+        res.writeHead(401, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Email incorrect' }));
+      }
+    });
+  }
+  else if (req.url === '/users' && req.method === 'GET') {
+    const users = getUsers();
+
+    // Supprimer les mots de passe avant d'envoyer la liste des utilisateurs
+    const sanitizedUsers = users.map(({ password, ...userWithoutPassword }) => userWithoutPassword);
+  
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(sanitizedUsers));
+  }
+>>>>>>> 072ed277c772b7419535cf5f40948b73241e4ea5
 
       if (!user) {
         log(
@@ -243,7 +315,15 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   log(`Serveur démarré sur http://localhost:${PORT}`);
 });
+=======
+ 
+// Middleware pour vérifier le token JWT
+server.listen(3000, () => {
+  console.log('Serveur démarré sur http://localhost:3000');
+});
+>>>>>>> 072ed277c772b7419535cf5f40948b73241e4ea5
