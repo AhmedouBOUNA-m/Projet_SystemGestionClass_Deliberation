@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connexion</title>
+    <title>Inscription</title>
     <link href="assets/CSS/Style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -18,15 +18,21 @@
           <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">À propos</a></li>
           <li>
-            <a href="auth.html"><i class="fas fa-user-plus"></i> Inscription</a>
+            <a href="auth.html"
+              ><i class="fas fa-sign-in-alt"></i> Connexion</a
+            >
           </li>
         </ul>
       </nav>
     </header>
 
     <div class="form-container">
-      <p class="title"><i class="fas fa-sign-in-alt"></i> Connexion</p>
-      <form class="form" onsubmit="login(event)">
+      <p class="title"><i class="fas fa-user-plus"></i> Inscription</p>
+      <form class="form" onsubmit="register(event)">
+        <div class="input-group">
+          <label for="name"><i class="fas fa-user"></i> Nom complet</label>
+          <input type="text" id="name" placeholder="Votre nom" required />
+        </div>
         <div class="input-group">
           <label for="email"><i class="fas fa-envelope"></i> Email</label>
           <input
@@ -43,20 +49,22 @@
             id="password"
             placeholder="••••••••"
             required
+            minlength="6"
           />
-          <div class="forgot">
-            <a href="#"
-              ><i class="fas fa-question-circle"></i> Mot de passe oublié ?</a
-            >
+          <div
+            class="password-strength"
+            style="margin-top: 5px; font-size: 0.8rem; color: var(--muted-text)"
+          >
+            <span>Le mot de passe doit contenir au moins 6 caractères</span>
           </div>
         </div>
-        <button class="btn btn-primary login-btn" type="submit">
-          <i class="fas fa-sign-in-alt"></i> Se connecter
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-user-plus"></i> S'inscrire
         </button>
       </form>
       <p class="signup">
-        Pas de compte ?
-        <a href="auth.html"><i class="fas fa-user-plus"></i> S'inscrire</a>
+        Déjà inscrit ?
+        <a href="auth.html"><i class="fas fa-sign-in-alt"></i> Se connecter</a>
       </p>
     </div>
 
