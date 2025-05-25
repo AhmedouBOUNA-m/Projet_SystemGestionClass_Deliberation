@@ -1,13 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/Style.css">
-    <link rel="stylesheet" href="assets/CSS/Bootstrap/css/bootstrap.min.css">
-    <title>about</title>
-</head>
-<body>
-    
-</body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos</title>
+    <link href="assets/CSS/Style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Projet Atelier</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li>
+            <a href="login.html"
+              ><i class="fas fa-sign-in-alt"></i> Connexion</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="dashboard">
+      <div class="welcome-message">
+        <h1><i class="fas fa-info-circle"></i> À propos de nous</h1>
+        <p>Découvrez notre plateforme et notre équipe</p>
+      </div>
+
+      <div
+        class="about-content"
+        style="
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 2rem;
+          background-color: var(--primary-bg);
+          border-radius: 0.75rem;
+        "
+      >
+        <h2 style="color: var(--accent-color); margin-bottom: 1rem">
+          Notre mission
+        </h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.6">
+          Nous nous engageons à fournir une solution d'authentification
+          sécurisée et facile à utiliser pour nos utilisateurs. Notre plateforme
+          est conçue avec les dernières technologies pour garantir la sécurité
+          et la performance.
+        </p>
+
+        <h2 style="color: var(--accent-color); margin-bottom: 1rem">
+          Notre équipe
+        </h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.6">
+          Une équipe de développeurs passionnés travaille sans relâche pour
+          améliorer votre expérience utilisateur.
+        </p>
+
+        <h2 style="color: var(--accent-color); margin-bottom: 1rem">Contact</h2>
+        <p style="line-height: 1.6">
+          <i class="fas fa-envelope"></i> Email: contact@monapp.com<br />
+          <i class="fas fa-phone"></i> Téléphone: +123 456 7890
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ateli. L2 IAGE izi dakar.</p>
+    </footer>
+
+    <script src="assets/JS/app.js"></script>
+  </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "projet_systemgestionclass_deliberation",
+  "version": "1.0.0",
+  "description": "Système d'authentification sécurisé",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedouBOUNA-m/Projet_SystemGestionClass_Deliberation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AhmedouBOUNA-m/Projet_SystemGestionClass_Deliberation/issues"
+  },
+  "homepage": "https://github.com/AhmedouBOUNA-m/Projet_SystemGestionClass_Deliberation#readme"
+}

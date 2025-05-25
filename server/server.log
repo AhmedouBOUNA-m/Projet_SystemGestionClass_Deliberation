@@ -1,0 +1,78 @@
+[2025-05-20T19:58:43.091Z] Serveur démarré sur http://localhost:3000
+[2025-05-20T19:58:52.828Z] GET /users
+[2025-05-20T19:58:52.834Z] Liste utilisateurs envoyée (2 utilisateurs)
+[2025-05-20T20:00:38.979Z] Serveur démarré sur http://localhost:3000
+[2025-05-20T20:02:19.878Z] Serveur démarré sur http://localhost:3000
+[2025-05-20T20:04:07.720Z] Serveur démarré sur http://localhost:3000
+[2025-05-20T20:04:13.639Z] GET /
+[2025-05-20T20:04:13.640Z] Route non trouvée: /
+[2025-05-20T20:04:14.221Z] GET /favicon.ico
+[2025-05-20T20:04:14.222Z] Route non trouvée: /favicon.ico
+[2025-05-20T20:29:20.373Z] Serveur démarré sur http://localhost:3000
+[2025-05-20T20:29:45.334Z] POST /login
+[2025-05-20T20:29:45.339Z] POST /login
+[2025-05-20T20:29:45.407Z] Connexion réussie: mololo1717@gmail.com
+[2025-05-20T20:29:45.410Z] Connexion réussie: mololo1717@gmail.com
+[2025-05-20T20:29:47.014Z] GET /users
+[2025-05-20T20:29:47.023Z] Liste utilisateurs envoyée (2 utilisateurs)
+[2025-05-20T20:29:52.908Z] DELETE /users/1747768657493
+[2025-05-20T20:29:52.914Z] Utilisateur supprimé: 1747768657493
+[2025-05-20T20:29:52.922Z] GET /users
+[2025-05-20T20:29:52.925Z] Liste utilisateurs envoyée (1 utilisateurs)
+[2025-05-25T07:42:10.615Z] Serveur démarré sur http://localhost:3000
+[2025-05-25T07:42:39.161Z] GET /users
+[2025-05-25T07:42:39.188Z] Token invalide: jwt expired
+[2025-05-25T07:42:57.662Z] POST /login
+[2025-05-25T07:42:57.666Z] Tentative de connexion échouée - Email inconnu: stefmouha@gmail.com
+[2025-05-25T07:42:57.669Z] POST /login
+[2025-05-25T07:42:57.672Z] Tentative de connexion échouée - Email inconnu: stefmouha@gmail.com
+[2025-05-25T07:43:25.245Z] POST /register
+[2025-05-25T07:43:25.252Z] POST /register
+[2025-05-25T07:43:25.384Z] Nouvel utilisateur inscrit: jus@gmail.com
+[2025-05-25T07:43:25.388Z] Nouvel utilisateur inscrit: jus@gmail.com
+[2025-05-25T07:43:40.652Z] POST /login
+[2025-05-25T07:43:40.656Z] POST /login
+[2025-05-25T07:43:40.778Z] Connexion réussie: jus@gmail.com
+[2025-05-25T07:43:40.783Z] Connexion réussie: jus@gmail.com
+[2025-05-25T07:43:42.398Z] GET /users
+[2025-05-25T07:43:42.402Z] Liste utilisateurs envoyée (2 utilisateurs)
+[2025-05-25T07:44:47.416Z] POST /register
+[2025-05-25T07:44:47.419Z] POST /register
+[2025-05-25T07:44:47.522Z] Nouvel utilisateur inscrit: fraise@gmail.com
+[2025-05-25T07:44:47.526Z] Nouvel utilisateur inscrit: fraise@gmail.com
+[2025-05-25T07:44:58.389Z] POST /login
+[2025-05-25T07:44:58.392Z] POST /login
+[2025-05-25T07:44:58.553Z] Connexion réussie: fraise@gmail.com
+[2025-05-25T07:44:58.558Z] Connexion réussie: fraise@gmail.com
+[2025-05-25T07:45:00.187Z] GET /users
+[2025-05-25T07:45:00.191Z] Liste utilisateurs envoyée (3 utilisateurs)
+[2025-05-25T07:51:13.120Z] Serveur démarré sur http://localhost:3000
+[2025-05-25T07:56:20.054Z] POST /login
+[2025-05-25T07:56:20.063Z] POST /login
+[2025-05-25T07:56:20.204Z] Connexion réussie: fraise@gmail.com
+[2025-05-25T07:56:20.210Z] Connexion réussie: fraise@gmail.com
+[2025-05-25T07:56:21.928Z] GET /users
+[2025-05-25T07:56:21.939Z] Liste utilisateurs envoyée (3 utilisateurs)
+[2025-05-25T07:57:53.888Z] GET /users
+[2025-05-25T07:57:53.890Z] Liste utilisateurs envoyée (3 utilisateurs)
+[2025-05-25T08:12:14.690Z] Serveur démarré sur http://localhost:3000
+[2025-05-25T08:12:32.598Z] GET /users
+[2025-05-25T08:12:32.625Z] Liste utilisateurs envoyée (3 utilisateurs)
+[2025-05-25T08:12:36.909Z] GET /users
+[2025-05-25T08:12:36.911Z] Liste utilisateurs envoyée (3 utilisateurs)
+[2025-05-25T08:12:38.094Z] GET /users
+[2025-05-25T08:12:38.097Z] Liste utilisateurs envoyée (3 utilisateurs)
+[2025-05-25T08:13:11.099Z] POST /register
+[2025-05-25T08:13:11.103Z] POST /register
+[2025-05-25T08:13:11.168Z] Nouvel utilisateur inscrit: eft@gmail.com
+[2025-05-25T08:13:11.169Z] Nouvel utilisateur inscrit: eft@gmail.com
+[2025-05-25T08:13:19.832Z] POST /login
+[2025-05-25T08:13:19.834Z] POST /login
+[2025-05-25T08:13:19.889Z] Connexion réussie: eft@gmail.com
+[2025-05-25T08:13:19.893Z] Connexion réussie: eft@gmail.com
+[2025-05-25T08:13:21.468Z] GET /users
+[2025-05-25T08:13:21.470Z] Liste utilisateurs envoyée (4 utilisateurs)
+[2025-05-25T08:13:25.495Z] DELETE /users/1748160791169
+[2025-05-25T08:13:25.498Z] Utilisateur supprimé: 1748160791169
+[2025-05-25T08:13:25.506Z] GET /users
+[2025-05-25T08:13:25.509Z] Liste utilisateurs envoyée (3 utilisateurs)

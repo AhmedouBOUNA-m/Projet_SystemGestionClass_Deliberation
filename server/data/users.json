@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1747766053837",
+    "name": "light yagami",
+    "email": "light404@gmail.com",
+    "password": "$2b$10$1rkty9zbCQNI0svpCbjysu0gBfXC40ws7TVHx1MQZyIeUnXHgyLmi",
+    "createdAt": "2025-05-20T18:34:13.837Z"
+  },
+  {
+    "id": "1748159005387",
+    "name": "jus",
+    "email": "jus@gmail.com",
+    "password": "$2b$10$3yMgfFEZhB5FhIwIkbE1v.Cr.Wu0.JBNe7eSiL1zGh.x1NBgR/bK2",
+    "createdAt": "2025-05-25T07:43:25.387Z"
+  },
+  {
+    "id": "1748159087524",
+    "name": "fraise",
+    "email": "fraise@gmail.com",
+    "password": "$2b$10$zKYY6y9rlYyJMx0kuyrbyeKfZKdFHFinwhpBInSOOZtUNE635X7Xy",
+    "createdAt": "2025-05-25T07:44:47.524Z"
+  }
+]

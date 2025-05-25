@@ -1,31 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/CSS/Style.css" rel="stylesheet">
-    <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <title>Index</title>
-</head>
-<body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil Public</title>
+    <link href="assets/CSS/Style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Projet Atelier</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li>
+            <a href="login.html"
+              ><i class="fas fa-sign-in-alt"></i> Connexion</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="container mt-5 align-content-center">
-    <h1 class="text-center">Bienvenu</h1>
-    <button class="btn btn-success" onclick="logout()">deconnecter</button>
-  </div>
+    <main class="dashboard">
+      <div class="welcome-message">
+        <h1><i class="fas fa-home"></i> Bienvenue sur MonApp !</h1>
+        <p>Une solution complète de gestion d'utilisateurs.</p>
+        <div
+          class="cta-buttons"
+          style="
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+          "
+        >
+          <a href="login.html" class="btn btn-primary">Se connecter</a>
+          <a
+            href="auth.html"
+            class="btn"
+            style="background: var(--border-color)"
+            >S'inscrire</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Projet Atelier. izi dakar L'2IAGE.</p>
+    </footer>
+
+    <script src="assets/JS/app.js"></script>
   </body>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const token = localStorage.getItem('authToken');
-      if (!token) {
-        window.location.href = 'auth.html';
-      }
-    });
-  function logout() {
-  // Supprime le token stocké
-  localStorage.removeItem('authToken');
-  window.location.reload();
-}
-
-    </script>
 </html>
