@@ -1,41 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/CSS/Style.css" rel="stylesheet">
-    <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <title>Authentification</title>
-</head>
-<body>
-    <form onsubmit="register(event)">
-        <div class="card col-11 col-sm-6 position-absolute top-50 start-50 translate-middle shadow">
-        
-            <h5 class="card-title text-center mt-3">Créer un compte</h5>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <link href="assets/CSS/Style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Projet Atelier</div>
+      <nav>
+        <ul>
+          <li><a href="about.html">À propos</a></li>
+          <li>
+            <a href="auth.html"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-            <div class="card-body">
-                <div class="form-group mb-2">
-                    <input class="form-control" id="name" type="text" placeholder="Nom" required>
-                    
-                </div>
-                <div class="form-group mb-2">
-                    <input class="form-control" id="email" type="email" placeholder="Email" required>
-                </div>
-                <div class="form-group mb-2">
-                    <input class="form-control" id="password" type="password" placeholder="Mot de passe" required>
-                </div>
-            </div>
-            <div class="d-grid gap-2 col-3 mx-auto">
-                    <button class="btn btn-success"  type="submit">S'inscrir</button>
-            </div>
-            <div class="text-xl-center m-3">
-                <a class="nav-link text-primary" href="auth.html">Vous avez déjà un compte ?</a>
-            </div>
+    <div class="form-container">
+      <p class="title"><i class="fas fa-user-plus"></i> Inscription</p>
+      <form class="form" onsubmit="register(event)">
+        <div class="input-group">
+          <label for="name"><i class="fas fa-user"></i> Nom complet</label>
+          <input type="text" id="name" placeholder="Votre nom" required />
         </div>
-    </form>
+        <div class="input-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="exemple@email.com"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="password"><i class="fas fa-lock"></i> Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+            minlength="6"
+          />
+          <div
+            class="password-strength"
+            style="margin-top: 5px; font-size: 0.8rem; color: var(--muted-text)"
+          >
+            <span>Le mot de passe doit contenir au moins 6 caractères</span>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-user-plus"></i> S'inscrire
+        </button>
+      </form>
+      <p class="signup">
+        Déjà inscrit ?
+        <a href="auth.html"><i class="fas fa-sign-in-alt"></i> Se connecter</a>
+      </p>
+    </div>
 
-
-
-</body>
-<script src="assets/JS/app.js"></script>
+    <script src="assets/JS/app.js"></script>
+  </body>
 </html>
