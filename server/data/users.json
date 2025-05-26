@@ -34,5 +34,23 @@
     "email": "vrcwes@rvf",
     "password": "$2b$10$B7P/TwHZq.ZgTDgtZ5Cu6uI.TkPzAGBfQSMw6okQNaqMM26PTOc4e",
     "id": 6
+  },
+  {
+    "name": "Ahmedou",
+    "email": "vrcwe@rvfd",
+    "password": "$2b$10$ehqnCH9zDDRiUzE7NIAghueJHDnKGpxCloqnkuOlR1cqJ6FKwQUGi",
+    "id": 7
+  },
+  {
+    "name": "Ahmedou",
+    "email": "ahmedouboune54@gmail.com",
+    "password": "$2b$10$LPpqdO.f2V4D0HQRSXWsEun1KR7EP1zie3.PcvqVRejkwpor.pyDC",
+    "id": 8
+  },
+  {
+    "name": "Ahmedou",
+    "email": "famehek988@hisotyr.com",
+    "password": "$2b$10$UnlhDMwtHBAZpPwbgp.auOtAoSo7DRQ7eF1dpjyWFrkbgmXNje5/W",
+    "id": 9
   }
 ]

@@ -6,6 +6,7 @@
     <link href="assets/CSS/Style.css" rel="stylesheet">
     <link href="assets/CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap4.css" rel="stylesheet">
     
 
@@ -15,7 +16,8 @@
   <!-- topbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">app</a>
+        <!-- <a class="navbar-brand" href="#">app</a> -->
+        <div class="logo">Projet Atelier</div>
         <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,24 +30,17 @@
                     <a class="nav-link" href="#">Utilisateurs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="logout()">deconnexion</a>
+                    <a class="nav-link" href="#" onclick="logout()"><i class="fas fa-sign-in-alt"></i>  deconnecter</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Inscription</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
 </nav>
   <!-- //topbar -->
 
-
-
-
-
-  <!-- <div class="container mt-5 align-content-center">
-    <h2 class="text-center">Bienvenue</h2>
-  </div> -->
 
   <!-- //afficher les utilisateurs -->
 <div class="container shadow mt-4 mb-4 p-3">
