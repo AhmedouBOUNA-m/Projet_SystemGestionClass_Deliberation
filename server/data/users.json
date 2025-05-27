@@ -16,5 +16,29 @@
     "email": "nohop39214@hdrlog.com",
     "password": "$2b$10$4iidbMFLIMhm4wu7pBF0RudqsNoX48olwAY7AqoK8kvqY8wEE4IBK",
     "id": 3
+  },
+  {
+    "name": "Gilbert Dioh",
+    "email": "gdioh38@gmail.com",
+    "password": "$2b$10$eAdUesWEQ7nZzK/EvvO3z.HMT.mXkg/crC/C90xJM7FvgnFlObQmW",
+    "id": 4
+  },
+  {
+    "name": "tapioka",
+    "email": "gilbert1302@gmail.com",
+    "password": "$2b$10$FaNHTbQGYXMUHtCPJnVvt.L08pDaXOF9oIyg1g8fka8b2kT9VyApa",
+    "id": 5
+  },
+  {
+    "name": "louis",
+    "email": "gilbert2001@gmail.com",
+    "password": "$2b$10$cPpGsF/lFksPey4/icbVc.akdt8KiybtsKCHw80B6AMk5HUONpZny",
+    "id": 6
+  },
+  {
+    "name": "Yunus",
+    "email": "yunus2001@gmail.com",
+    "password": "$2b$10$pT2mM9zENIhW9GMjltxP5uCBC1vCi5n6BNFVb2cqJn.ivY3BhHH4i",
+    "id": 7
   }
 ]
