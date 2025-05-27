@@ -16,5 +16,11 @@
     "email": "nohop39214@hdrlog.com",
     "password": "$2b$10$4iidbMFLIMhm4wu7pBF0RudqsNoX48olwAY7AqoK8kvqY8wEE4IBK",
     "id": 3
+  },
+  {
+    "name": "arthur",
+    "email": "chrisarthur@groupeisi.com",
+    "password": "$2b$10$o8H7uubLzC3XkjzXrp5HEu9uDo9r3kelkz8k408pe7ZUhtZIrk2.2",
+    "id": 4
   }
 ]
